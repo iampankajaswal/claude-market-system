@@ -101,7 +101,7 @@ def highlight_score(val):
     return ''
 
 st.dataframe(
-    df.style.applymap(highlight_score, subset=df.columns[1:]),
+    df.style.map(highlight_score, subset=df.columns[1:]),
     use_container_width=True,
     height=600
 )
